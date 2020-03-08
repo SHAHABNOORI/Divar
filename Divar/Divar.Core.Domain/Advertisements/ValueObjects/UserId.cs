@@ -13,6 +13,7 @@ namespace Divar.Core.Domain.Advertisements.ValueObjects
         }
 
         public static UserId FromString(string value) => new UserId(Guid.Parse(value));
+        public static UserId FromGuid(Guid value) => new UserId(value);
 
         public UserId(Guid value)
         {

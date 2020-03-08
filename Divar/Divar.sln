@@ -5,13 +5,19 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Core", "01.Core", "{EABA194F-D20F-4BCD-A772-8B224B88CA18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divar.Core.Domain", "Divar.Core.Domain\Divar.Core.Domain.csproj", "{7A4359D4-74DF-498E-A463-578099E5C5EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Divar.Core.Domain", "Divar.Core.Domain\Divar.Core.Domain.csproj", "{7A4359D4-74DF-498E-A463-578099E5C5EF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Framework", "00.Framework", "{4EFFAD04-9301-44E7-8991-8DD69D7D3848}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divar.Framework.Domain", "Divar.Framework.Domain\Divar.Framework.Domain.csproj", "{9D1E5BE5-3943-4457-A1D1-C3D89311F1DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Divar.Framework.Domain", "Divar.Framework.Domain\Divar.Framework.Domain.csproj", "{9D1E5BE5-3943-4457-A1D1-C3D89311F1DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divar.Framework.Tools", "Divar.Framework.Tools\Divar.Framework.Tools.csproj", "{9645E245-72A4-4AD3-B52D-08AA96E5DD05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Divar.Framework.Tools", "Divar.Framework.Tools\Divar.Framework.Tools.csproj", "{9645E245-72A4-4AD3-B52D-08AA96E5DD05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Infrastructures", "02.Infrastructures", "{BECDA442-D694-4B57-B113-206AE944072A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.EndPoints", "03.EndPoints", "{83A94F47-48D7-48E6-9D50-27B498B46AF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divar.EndPoints.Api", "03.EndPoints\Divar.EndPoints.Api\Divar.EndPoints.Api.csproj", "{A2AFD86C-E92E-4013-8EFE-F462C76D1CCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +37,10 @@ Global
 		{9645E245-72A4-4AD3-B52D-08AA96E5DD05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9645E245-72A4-4AD3-B52D-08AA96E5DD05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9645E245-72A4-4AD3-B52D-08AA96E5DD05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2AFD86C-E92E-4013-8EFE-F462C76D1CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2AFD86C-E92E-4013-8EFE-F462C76D1CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2AFD86C-E92E-4013-8EFE-F462C76D1CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2AFD86C-E92E-4013-8EFE-F462C76D1CCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +49,7 @@ Global
 		{7A4359D4-74DF-498E-A463-578099E5C5EF} = {EABA194F-D20F-4BCD-A772-8B224B88CA18}
 		{9D1E5BE5-3943-4457-A1D1-C3D89311F1DB} = {4EFFAD04-9301-44E7-8991-8DD69D7D3848}
 		{9645E245-72A4-4AD3-B52D-08AA96E5DD05} = {4EFFAD04-9301-44E7-8991-8DD69D7D3848}
+		{A2AFD86C-E92E-4013-8EFE-F462C76D1CCB} = {83A94F47-48D7-48E6-9D50-27B498B46AF8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D0280444-1461-4252-8138-0448E6066A5E}
