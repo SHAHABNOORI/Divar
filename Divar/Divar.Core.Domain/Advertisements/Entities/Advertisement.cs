@@ -1,69 +1,81 @@
 ﻿using System;
 using Divar.Core.Domain.Advertisements.Enums;
+using Divar.Core.Domain.Advertisements.ValueObjects;
+using Divar.Framework.Domain.Entities;
+using Divar.Framework.Domain.Exceptions;
+using Divar.Framework.Tools.Enums;
 
 namespace Divar.Core.Domain.Advertisements.Entities
 {
-    public class Advertisement
+    public class Advertisement : BaseEntity<Guid>
     {
-        public Guid Id { get; private set; }
+        #region Fields    
+        public UserId OwnerId { get; protected set; }
 
-        public Guid OwnerId { get; private set; }
+        public UserId ApprovedBy { get; protected set; }
 
-        public string Title { get; private set; }
+        public AdvertisementTitle Title { get; protected set; }
 
-        public string Description { get; private set; }
+        public AdvertisementDescription Description { get; protected set; }
 
-        public long Price { get; private set; }
+        public Price Price { get; protected set; }
 
-        public AdvertisementStatus Status { get; private set; }
+        public AdvertisementState State { get; protected set; }
 
-        public Advertisement(Guid id, Guid ownerId)
+        #endregion
+
+        public Advertisement(Guid id, UserId ownerId)
         {
-            if (id == Guid.Empty)
-            {
-                throw new Exception();
-            }
-
-            if (OwnerId == Guid.Empty)
-            {
-                throw new Exception();
-            }
-
             Id = id;
             OwnerId = ownerId;
-            CheckInvariants();
         }
 
-        public void SetTitle(string title)
+        public void SetTitle(AdvertisementTitle title)
         {
-            if (string.IsNullOrEmpty(title))
-                throw new Exception();
-
             Title = title;
-            CheckInvariants();
+            ValidateInvariants();
         }
 
-        public void SetDescription(string description)
+        public void UpdateText(AdvertisementDescription description)
         {
             Description = description;
-            CheckInvariants();
+            ValidateInvariants();
         }
-
-        public void SetPrice(long price)
+        public void UpdatePrice(Price price)
         {
             Price = price;
-            CheckInvariants();
+            ValidateInvariants();
+        }
+        public void RequestToPublish()
+        {
+            State = AdvertisementState.ReviewPending;
+            ValidateInvariants();
         }
 
-        public void SendForReview()
+        protected override void ValidateInvariants()
         {
-            Status = AdvertisementStatus.ReviewPending;
-            CheckInvariants();
-        }
-
-        public void CheckInvariants()
-        {
-
+            var isValid =
+                Id != default &&
+                OwnerId != null &&
+                (State 
+                    switch
+                    {
+                    AdvertisementState.ReviewPending =>
+                    Title != null
+                    && Description != null
+                    && Price != null,
+                    AdvertisementState.Active =>
+                    Title != null
+                    && Description != null
+                    && Price != null
+                    && ApprovedBy != null,
+                    _ => true
+                    });
+            if (!isValid)
+            {
+                throw new InvalidEntityStateException(this,
+                    $"مقدار تنظیم شده برای آگهی در وضیعت {State.GetDescription()} غیر قابل قبول است");
+            }
         }
     }
 }

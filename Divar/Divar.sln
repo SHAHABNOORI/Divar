@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Framework", "00.Framewor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divar.Framework.Domain", "Divar.Framework.Domain\Divar.Framework.Domain.csproj", "{9D1E5BE5-3943-4457-A1D1-C3D89311F1DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divar.Framework.Tools", "Divar.Framework.Tools\Divar.Framework.Tools.csproj", "{9645E245-72A4-4AD3-B52D-08AA96E5DD05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{9D1E5BE5-3943-4457-A1D1-C3D89311F1DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D1E5BE5-3943-4457-A1D1-C3D89311F1DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D1E5BE5-3943-4457-A1D1-C3D89311F1DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9645E245-72A4-4AD3-B52D-08AA96E5DD05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9645E245-72A4-4AD3-B52D-08AA96E5DD05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9645E245-72A4-4AD3-B52D-08AA96E5DD05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9645E245-72A4-4AD3-B52D-08AA96E5DD05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{7A4359D4-74DF-498E-A463-578099E5C5EF} = {EABA194F-D20F-4BCD-A772-8B224B88CA18}
 		{9D1E5BE5-3943-4457-A1D1-C3D89311F1DB} = {4EFFAD04-9301-44E7-8991-8DD69D7D3848}
+		{9645E245-72A4-4AD3-B52D-08AA96E5DD05} = {4EFFAD04-9301-44E7-8991-8DD69D7D3848}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D0280444-1461-4252-8138-0448E6066A5E}

@@ -2,7 +2,7 @@
 
 namespace Divar.Core.Domain.Advertisements.Enums
 {
-    public enum AdvertisementStatus
+    public enum AdvertisementState
     {
         [Description("غیرفعال")]
         Inactive = 1,

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Divar.Framework.Domain\Divar.Framework.Domain.csproj" />
+    <ProjectReference Include="..\Divar.Framework.Tools\Divar.Framework.Tools.csproj" />
   </ItemGroup>
 
 </Project>

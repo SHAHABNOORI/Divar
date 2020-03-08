@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Shahab\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Shahab\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Divar.-313737806.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Shahab\source\repos\Divar\Divar" t="IncludeFlat">
+      <e p="00.Framework" t="Include" />
+      <e p="01.Core" t="Include" />
+      <e p="Divar.Core.Domain" t="IncludeRecursive">
+        <e p="Advertisements" t="Include">
+          <e p="Entities" t="Include">
+            <e p="Advertisement.cs" t="Include" />
+          </e>
+          <e p="Enums" t="Include">
+            <e p="AdvertisementState.cs" t="Include" />
+          </e>
+          <e p="ValueObjects" t="Include">
+            <e p="AdvertisementDescription.cs" t="Include" />
+            <e p="AdvertisementTitle.cs" t="Include" />
+            <e p="Price.cs" t="Include" />
+            <e p="Rial.cs" t="Include" />
+            <e p="UserId.cs" t="Include" />
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Divar.Core.Domain.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Divar.Core.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Divar.Framework.Domain" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Divar.Framework.Domain.csproj" t="IncludeRecursive" />
+        <e p="Entities" t="Include">
+          <e p="BaseEntity.cs" t="Include" />
+        </e>
+        <e p="Exceptions" t="Include">
+          <e p="InvalidEntityStateException.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Divar.Framework.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ValueObjects" t="Include">
+          <e p="BaseValueObject.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Divar.Framework.Tools" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Divar.Framework.Tools.csproj" t="IncludeRecursive" />
+        <e p="Enums" t="Include">
+          <e p="EnumExtensions.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Divar.Framework.Tools.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Divar.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
