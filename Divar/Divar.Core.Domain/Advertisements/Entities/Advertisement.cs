@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Divar.Core.Domain.Advertisements.Enums;
 using Divar.Core.Domain.Advertisements.Events;
 using Divar.Core.Domain.Advertisements.ValueObjects;
@@ -9,7 +11,7 @@ using Divar.Framework.Tools.Enums;
 
 namespace Divar.Core.Domain.Advertisements.Entities
 {
-    public class Advertisement : BaseEntity<Guid>
+    public class Advertisement : BaseAggregateRoot<Guid>
     {
         #region Fields    
         public UserId OwnerId { get; protected set; }
@@ -24,10 +26,13 @@ namespace Divar.Core.Domain.Advertisements.Entities
 
         public AdvertisementState State { get; protected set; }
 
+        public List<Picture> Pictures { get; private set; }
+
         #endregion
 
         public Advertisement(Guid id, UserId ownerId)
         {
+            Pictures = new List<Picture>();
             HandleEvent(new AdvertisementCreated()
             {
                 Id = id,
@@ -70,6 +75,31 @@ namespace Divar.Core.Domain.Advertisements.Entities
                 Id = Id
             });
         }
+
+        public void AddPicture(Uri pictureUri, PictureSize size)
+        {
+            var newPic = new Picture(HandleEvent);
+            newPic.HandleEvent(new PictureAddedToAdvertisement
+            {
+                PictureId = new Guid(),
+                ClassifiedAdId = Id,
+                Url = pictureUri.ToString(),
+                Height = size.Height,
+                Width = size.Width
+            });
+            Pictures.Add(newPic);
+        }
+
+        public void ResizePicture(Guid pictureId, PictureSize newSize)
+        {
+            var picture = FindPicture(pictureId);
+            if (picture == null)
+                throw new InvalidOperationException(
+                    "تصویری با شناسه وارد شده وجود برای تغییر سایز وجود ندارد");
+            picture.Resize(newSize);
+        }
+
+        private Picture FindPicture(Guid id) => Pictures.FirstOrDefault(x => x.Id == id);
 
         protected override void SetStateByEvent(IEvent @event)
         {
@@ -114,11 +144,13 @@ namespace Divar.Core.Domain.Advertisements.Entities
                     Title != null
                     && Description != null
                     && Price != null,
+                    //&& !Pictures.Any(),
                     AdvertisementState.Active =>
                     Title != null
                     && Description != null
                     && Price != null
                     && ApprovedBy != null,
+                    //&& !Pictures.Any(),
                     _ => true
                 });
             if (!isValid)
