@@ -1,8 +1,12 @@
 using Divar.Core.ApplicationService.Advertisements.CommandHandlers;
 using Divar.Core.Domain.Advertisements.Data;
+using Divar.Framework.Domain.Data;
 using Divar.Infrastructures.Data.Fake.Advertisements;
+using Divar.Infrastructures.Data.SqlServer;
+using Divar.Infrastructures.Data.SqlServer.Advertisements;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,8 +27,12 @@ namespace Divar.EndPoints.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
-            services.AddSingleton<IAdvertisementRepository, FakeAdvertisementRepository>();
+            services.AddDbContext<DivarDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IUnitOfWork, AdvertisementUnitOfWork>();
+            //services.AddSingleton<IAdvertisementRepository, FakeAdvertisementRepository>();
+            services.AddScoped<IAdvertisementRepository, EfAdvertisementRepository>();
 
             services.AddScoped<CreateHandler>();
             services.AddScoped<RequestToPublishHandler>();

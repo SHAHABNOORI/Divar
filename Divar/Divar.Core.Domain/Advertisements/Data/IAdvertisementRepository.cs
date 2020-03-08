@@ -9,6 +9,6 @@ namespace Divar.Core.Domain.Advertisements.Data
 
         Advertisement Load(Guid id);
 
-        void Save(Advertisement entity);
+        void Add(Advertisement entity);
     }
 }

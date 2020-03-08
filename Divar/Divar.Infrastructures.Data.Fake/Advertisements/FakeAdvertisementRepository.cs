@@ -19,7 +19,7 @@ namespace Divar.Infrastructures.Data.Fake.Advertisements
             return _db[id];
         }
 
-        public void Save(Advertisement entity)
+        public void Add(Advertisement entity)
         {
             _db[entity.Id] = entity;
         }
