@@ -44,7 +44,7 @@ namespace Divar.Core.Domain.Advertisements.Entities
             });
         }
 
-        public void UpdateText(AdvertisementDescription description)
+        public void UpdateDescription(AdvertisementDescription description)
         {
 
             HandleEvent(new AdvertisementDescriptionUpdated()
