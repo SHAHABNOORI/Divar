@@ -1,4 +1,5 @@
 ﻿using Divar.Core.Domain.Advertisements.Entities;
+using Divar.Core.Domain.UserProfiles.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Divar.Infrastructures.Data.SqlServer
@@ -19,6 +20,8 @@ namespace Divar.Infrastructures.Data.SqlServer
         }
 
         public DbSet<Advertisement> Advertisements { get; set; }
+
+        public DbSet<UserProfile> UserProfiles { get; set; }
 
     }
 }

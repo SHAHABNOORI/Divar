@@ -7,32 +7,32 @@ namespace Divar.Infrastructures.Data.SqlServer.Advertisements
 {
     public class EfAdvertisementRepository: IAdvertisementRepository, IDisposable
     {
-        private readonly DivarDbContext _advertisementDbContext;
+        private readonly DivarDbContext _db;
 
-        public EfAdvertisementRepository(DivarDbContext advertisementDbContext)
+        public EfAdvertisementRepository(DivarDbContext db)
         {
-            _advertisementDbContext = advertisementDbContext;
+            _db = db;
         }
 
         public bool Exists(Guid id)
         {
-            return _advertisementDbContext.Advertisements.Any(c => c.Id == id);
+            return _db.Advertisements.Any(c => c.Id == id);
         }
 
         public Advertisement Load(Guid id)
         {
-            return _advertisementDbContext.Advertisements.Find(id);
+            return _db.Advertisements.Find(id);
         }
 
         public void Add(Advertisement entity)
         {
-            _advertisementDbContext.Advertisements.Add(entity);
-            //_advertisementDbContext.SaveChanges();
+            _db.Advertisements.Add(entity);
+            //_db.SaveChanges();
         }
 
         public void Dispose()
         {
-            _advertisementDbContext?.Dispose();
+            _db?.Dispose();
         }
     }
 }
