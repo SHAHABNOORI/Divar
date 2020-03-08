@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Divar.Core.Domain\Divar.Core.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
