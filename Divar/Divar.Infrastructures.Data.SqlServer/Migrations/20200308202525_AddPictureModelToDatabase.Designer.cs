@@ -4,14 +4,16 @@ using Divar.Infrastructures.Data.SqlServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Divar.Infrastructures.Data.SqlServer.Migrations
 {
     [DbContext(typeof(DivarDbContext))]
-    partial class DivarDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200308202525_AddPictureModelToDatabase")]
+    partial class AddPictureModelToDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
