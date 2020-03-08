@@ -19,7 +19,7 @@ namespace Divar.Core.Domain.Advertisements.ValueObjects
         {
             if (rial < 1)
             {
-                throw new ArgumentOutOfRangeException("مقدار قیمت کمتر از 1 ریال نمی‌تواند باشد", nameof(Price));
+                throw new ArgumentOutOfRangeException($"مقدار قیمت کمتر از 1 ریال نمی‌تواند باشد", nameof(Price));
             }
             Value = rial;
         }

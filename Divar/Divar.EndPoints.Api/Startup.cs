@@ -1,3 +1,6 @@
+using Divar.Core.ApplicationService.Advertisements.CommandHandlers;
+using Divar.Core.Domain.Advertisements.Data;
+using Divar.Infrastructures.Data.Fake.Advertisements;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +23,15 @@ namespace Divar.EndPoints.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddSingleton<IAdvertisementRepository, FakeAdvertisementRepository>();
+
+            services.AddScoped<CreateHandler>();
+            services.AddScoped<RequestToPublishHandler>();
+            services.AddScoped<UpdateDescriptionHandler>();
+            services.AddScoped<UpdatePriceHandler>();
+            services.AddScoped<UpdateTitleHandler>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Divar Api", Version = "v1" });
