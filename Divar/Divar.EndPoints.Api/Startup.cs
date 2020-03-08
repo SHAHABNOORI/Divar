@@ -1,10 +1,14 @@
 using Divar.Core.ApplicationService.Advertisements.CommandHandlers;
+using Divar.Core.ApplicationService.UserProfiles.CommandHandlers;
 using Divar.Core.Domain.Advertisements.Data;
+using Divar.Core.Domain.UserProfiles.Data;
 using Divar.Framework.Domain.Data;
 using Divar.Infrastructures.Data.SqlServer;
 using Divar.Infrastructures.Data.SqlServer.Advertisements;
+using Divar.Infrastructures.Data.SqlServer.UserProfiles;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,12 +36,20 @@ namespace Divar.EndPoints.Api
             services.AddScoped<IUnitOfWork, AdvertisementUnitOfWork>();
             //services.AddSingleton<IAdvertisementRepository, FakeAdvertisementRepository>();
             services.AddScoped<IAdvertisementRepository, EfAdvertisementRepository>();
-
+            services.AddScoped<IUserProfileRepository, EfUserProfileRepository>();
+            services.AddScoped<IAdvertisementQueryService, AdvertisementQueryService>();
+            services.AddScoped(c => new SqlConnection(Configuration.GetConnectionString("DefaultConnection")));
+            
             services.AddScoped<CreateHandler>();
             services.AddScoped<RequestToPublishHandler>();
             services.AddScoped<UpdateDescriptionHandler>();
             services.AddScoped<UpdatePriceHandler>();
             services.AddScoped<UpdateTitleHandler>();
+
+            services.AddScoped<RegisterUserHandler>();
+            services.AddScoped<UpdateUserNameHandler>();
+            services.AddScoped<UpdateUserEmailHandler>();
+            services.AddScoped<UpdateUserDisplayNameHandler>();
 
             services.AddSwaggerGen(c =>
             {
