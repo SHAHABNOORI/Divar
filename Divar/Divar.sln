@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{EFCBA546-E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divar.Infrastructures.Data.Fake", "Divar.Infrastructures.Data.Fake\Divar.Infrastructures.Data.Fake.csproj", "{BDAEDFB7-D300-4CBB-B95C-DC90906DD818}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divar.EndPoints.Api", "Divar.EndPoints.Api\Divar.EndPoints.Api.csproj", "{4E794C22-FC96-4FC2-B4D6-008283340C0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{BDAEDFB7-D300-4CBB-B95C-DC90906DD818}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDAEDFB7-D300-4CBB-B95C-DC90906DD818}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDAEDFB7-D300-4CBB-B95C-DC90906DD818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E794C22-FC96-4FC2-B4D6-008283340C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E794C22-FC96-4FC2-B4D6-008283340C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E794C22-FC96-4FC2-B4D6-008283340C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E794C22-FC96-4FC2-B4D6-008283340C0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{2106DB76-C221-484A-B560-43D633EF3C40} = {EABA194F-D20F-4BCD-A772-8B224B88CA18}
 		{EFCBA546-EE68-4315-8EFF-C318BDDF6CBB} = {BECDA442-D694-4B57-B113-206AE944072A}
 		{BDAEDFB7-D300-4CBB-B95C-DC90906DD818} = {EFCBA546-EE68-4315-8EFF-C318BDDF6CBB}
+		{4E794C22-FC96-4FC2-B4D6-008283340C0E} = {83A94F47-48D7-48E6-9D50-27B498B46AF8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D0280444-1461-4252-8138-0448E6066A5E}
