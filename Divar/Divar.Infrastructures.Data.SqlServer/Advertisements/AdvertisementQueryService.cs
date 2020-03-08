@@ -18,15 +18,16 @@ namespace Divar.Infrastructures.Data.SqlServer.Advertisements
         public AdvertisementDetail Query(GetActiveAdvertisement query)
         {
             string sqlQuery = "Select Top 1 a.Id as 'AdvertisementId'," +
-                              " a.Title,a.Text,p.Location as 'photoUrls', up.DisplayName as 'SellersDisplayName' " +
-                              " FROM Advertisments a " +
-                              " Inner Join Picture p on a.Id = p.AdvertismentId " +
+                              " a.Title,a.Description,p.Location as 'photoUrls', up.DisplayName as 'SellersDisplayName' " +
+                              " FROM Advertisements a " +
+                              " Inner Join Picture p on a.Id = p.AdvertisementId " +
                               " Inner Join UserProfiles up on a.OwnerId = up.Id" +
                               " Where State = 2 and " +
                               " a.Id = @AdvertisementId " +
                               " Order By p.[Order]";
-            return _sqlConnection.QuerySingleOrDefault<AdvertisementDetail>(sqlQuery,
+            var result= _sqlConnection.QuerySingleOrDefault<AdvertisementDetail>(sqlQuery,
                 new { query.AdvertisementId });
+            return result;
         }
 
         public AdvertisementSummary Query(GetActiveAdvertisementList query)
