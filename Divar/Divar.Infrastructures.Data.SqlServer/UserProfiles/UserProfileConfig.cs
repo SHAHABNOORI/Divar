@@ -1,10 +1,10 @@
-﻿using Bazzar.Core.Domain.Shared.ValueObjects;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Divar.Core.Domain.Shared.ValueObjects;
 using Divar.Core.Domain.UserProfiles.Entities;
 using Divar.Core.Domain.UserProfiles.ValueObjects;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Bazzar.Infrastructures.Data.SqlServer.UserProfiles
+namespace Divar.Infrastructures.Data.SqlServer.UserProfiles
 {
     public class UserProfileConfig : IEntityTypeConfiguration<UserProfile>
     {

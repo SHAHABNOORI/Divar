@@ -1,7 +1,7 @@
 ﻿using System;
 using Divar.Framework.Domain.ValueObjects;
 
-namespace Bazzar.Core.Domain.Shared.ValueObjects
+namespace Divar.Core.Domain.Shared.ValueObjects
 {
     public class Email : BaseValueObject<Email>
     {

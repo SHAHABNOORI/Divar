@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Divar.Core.Commands\Divar.Core.Commands.csproj" />
     <ProjectReference Include="..\Divar.Core.Domain\Divar.Core.Domain.csproj" />
     <ProjectReference Include="..\Divar.Framework.Domain\Divar.Framework.Domain.csproj" />
   </ItemGroup>

@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divar.EndPoints.Api", "Diva
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divar.Infrastructures.Data.SqlServer", "Divar.Infrastructures.Data.SqlServer\Divar.Infrastructures.Data.SqlServer.csproj", "{E65BB94F-5455-464B-9185-C84B22F0B22B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divar.Core.Commands", "Divar.Core.Commands\Divar.Core.Commands.csproj", "{6C6457F8-083B-4F87-A776-72397671A57B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divar.Core.Queries", "Divar.Core.Queries\Divar.Core.Queries.csproj", "{5A111C07-ECC6-4212-9F3D-D7B80FC3C579}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +65,14 @@ Global
 		{E65BB94F-5455-464B-9185-C84B22F0B22B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E65BB94F-5455-464B-9185-C84B22F0B22B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E65BB94F-5455-464B-9185-C84B22F0B22B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C6457F8-083B-4F87-A776-72397671A57B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C6457F8-083B-4F87-A776-72397671A57B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C6457F8-083B-4F87-A776-72397671A57B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C6457F8-083B-4F87-A776-72397671A57B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A111C07-ECC6-4212-9F3D-D7B80FC3C579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A111C07-ECC6-4212-9F3D-D7B80FC3C579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A111C07-ECC6-4212-9F3D-D7B80FC3C579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A111C07-ECC6-4212-9F3D-D7B80FC3C579}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +86,8 @@ Global
 		{BDAEDFB7-D300-4CBB-B95C-DC90906DD818} = {EFCBA546-EE68-4315-8EFF-C318BDDF6CBB}
 		{4E794C22-FC96-4FC2-B4D6-008283340C0E} = {83A94F47-48D7-48E6-9D50-27B498B46AF8}
 		{E65BB94F-5455-464B-9185-C84B22F0B22B} = {EFCBA546-EE68-4315-8EFF-C318BDDF6CBB}
+		{6C6457F8-083B-4F87-A776-72397671A57B} = {EABA194F-D20F-4BCD-A772-8B224B88CA18}
+		{5A111C07-ECC6-4212-9F3D-D7B80FC3C579} = {EABA194F-D20F-4BCD-A772-8B224B88CA18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D0280444-1461-4252-8138-0448E6066A5E}

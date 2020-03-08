@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Divar.Core.Domain.Advertisements.Commands
+namespace Divar.Core.Commands.Advertisements.Commands
 {
     public class UpdateTitleCommand
     {

@@ -1,5 +1,5 @@
 ﻿using System;
-using Divar.Core.Domain.Advertisements.Commands;
+using Divar.Core.Commands.Advertisements.Commands;
 using Divar.Core.Domain.Advertisements.Data;
 using Divar.Core.Domain.Advertisements.ValueObjects;
 using Divar.Framework.Domain.ApplicationServices;

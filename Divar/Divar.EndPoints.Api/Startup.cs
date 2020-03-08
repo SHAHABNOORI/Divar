@@ -1,7 +1,6 @@
 using Divar.Core.ApplicationService.Advertisements.CommandHandlers;
 using Divar.Core.Domain.Advertisements.Data;
 using Divar.Framework.Domain.Data;
-using Divar.Infrastructures.Data.Fake.Advertisements;
 using Divar.Infrastructures.Data.SqlServer;
 using Divar.Infrastructures.Data.SqlServer.Advertisements;
 using Microsoft.AspNetCore.Builder;

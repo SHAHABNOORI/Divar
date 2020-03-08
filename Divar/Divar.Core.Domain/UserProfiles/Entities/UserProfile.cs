@@ -1,5 +1,5 @@
 ﻿using System;
-using Bazzar.Core.Domain.Shared.ValueObjects;
+using Divar.Core.Domain.Shared.ValueObjects;
 using Divar.Core.Domain.UserProfiles.Events;
 using Divar.Core.Domain.UserProfiles.ValueObjects;
 using Divar.Framework.Domain.Entities;

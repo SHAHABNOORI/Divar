@@ -2,9 +2,8 @@
 using System.Linq;
 using Divar.Core.Domain.UserProfiles.Data;
 using Divar.Core.Domain.UserProfiles.Entities;
-using Divar.Infrastructures.Data.SqlServer;
 
-namespace Bazzar.Infrastructures.Data.SqlServer.UserProfiles
+namespace Divar.Infrastructures.Data.SqlServer.UserProfiles
 {
     public class EfUserProfileRepository : IUserProfileRepository, IDisposable
     {

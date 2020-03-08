@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Divar.Core.ApplicationService.Advertisements.CommandHandlers;
-using Divar.Core.Domain.Advertisements.Commands;
+using Divar.Core.Commands.Advertisements.Commands;
 
 namespace Divar.EndPoints.Api.Controllers.Advertisements
 {
